@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Apex Legends</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -36,6 +37,9 @@
         </div>
     </header>
     <section class="hero">
+        <video autoplay muted loop playsinline class="video-bg">
+    <source src="assets/Fondos/video.mp4" type="video/mp4">
+  </video>
 
          <div class="hero-button">
             <a href="#">Descargar</a>
@@ -47,15 +51,15 @@
 
     <div class="videos-grid">
 
-        <div class="video-box">
+        <div class="video-box" data-aos="zoom-in-right" data-aos-duration="100000">
             <iframe
                 src="https://www.youtube.com/embed/oQtHENM_GZU?mute=1&controls=1" title="Apex Trailer 1" allow="encrypted-media"allowfullscreen>
             </iframe>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum deserunt harum accusamus illo consequuntur natus! Laborum consectetur, minima quos ad sunt rerum quisquam, velit non blanditiis, eum magnam ut!</p>
         </div>
 
-        <div class="video-box">
-            <iframe  src="https://www.youtube.com/watch?v=nTKkOaxrF8A" title="Apex Trailer 2"  allow="encrypted-media" allowfullscreen>
+        <div class="video-box" data-aos="zoom-in-left" data-aos-duration="1000000">
+            <iframe  src="https://www.youtube.com/embed/dSz8Dnj1pdI?&mute=1&loop=1&playlist=dSz8Dnj1pdI&controls=0&modestbranding=1"  allow="encrypted-media" allowfullscreen >
             </iframe>
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eum deserunt harum accusamus illo consequuntur natus! Laborum consectetur, minima quos ad sunt rerum quisquam, velit non blanditiis, eum magnam ut!</p>
         </div>
@@ -70,8 +74,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatem aliquid deleniti. Recusandae voluptatem temporibus adipisci inventore ratione obcaecati, quis sint? Hic dicta eligendi ipsam cum aliquam recusandae a autem.</p>
 
     </section>
-
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
