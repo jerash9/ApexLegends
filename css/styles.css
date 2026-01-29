@@ -81,8 +81,12 @@ body {
 .hero-content {
     text-align: center;
     background-color: rgb(0 0 0 / 79%);
-    padding: 120px;
+    
+    width: 70vh;
+    height: 40vh;
     border-radius: 10px;
+    padding: 10vh;
+
 }
 
 .hero-content h1 {
