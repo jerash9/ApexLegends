@@ -275,7 +275,6 @@ box-shadow: 0 0 20px #6c050596;
 
 .text_container{
     display:flex;
-    
 }
 
 .charactertext{
@@ -283,7 +282,6 @@ box-shadow: 0 0 20px #6c050596;
     border-radius: 5px;
     font-size: 1.5rem;
     margin-top: 5vh;
-    position: absolute;
 }   
 
 .charactertext p{

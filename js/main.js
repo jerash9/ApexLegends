@@ -11,9 +11,8 @@ $(document).ready(function(){
     $(".card").on("click", function(){
         $("#1").hide();
         $("#t1").hide();
-        $("#2").show();
-        $("#t2").show();
-        console.log("#1")
+        $("#5").show();
+        $("#t3").show();
     });
 
 });
