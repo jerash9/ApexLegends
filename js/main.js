@@ -15,4 +15,22 @@ $(document).ready(function(){
         $("#t3").show();
     });
 
+
+
+    // Botones de cambio de mapa
+
+    function changeMap(map_id) {
+        document.getElementById("bg").style.backgroundImage = "url('assets/mapas/Map_"+map_id+".webp')";
+        console.log("'Map_"+map_id+".webp')");
+    };
+
+    let mapsBtns = document.querySelectorAll(".map");
+
+    for (let i = 0; i < mapsBtns.length; i++) {
+        mapsBtns[i].addEventListener("click",function(){
+            changeMap(this.dataset.map);
+        });
+        
+    }
+
 });
