@@ -458,17 +458,34 @@ box-shadow: 0 0 20px rgba(230, 182, 92, 0.6);
 }
 
 /* ARMAS */
-
+.arsenal{
+ background-image: url(../assets/Fondos/armasFondoBase.jpg);
+}
 .weaponlist {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 60px;
+    max-width: 1400px;
+    align-items: center;
+
+}
+.container {
+display: flex;
+flex-direction: column;
+flex: 1;
+padding: 40px 20px 160px 20px;
+ align-items: center;
+}
+
+.container h1{
+    justify-content: center;
+    height: fit-content;
 }
 
 .weapon {
     padding: 50px;
-}
+} 
 
 
 /* MAPAS EN FOOTER */
@@ -506,6 +523,15 @@ filter: brightness(0.6);
 position: absolute;
 bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
 
 
 
