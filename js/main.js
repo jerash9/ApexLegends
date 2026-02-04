@@ -59,3 +59,14 @@ $(document).ready(function(){
         });
         
     });
+    function changeChara(chara_id) {
+
+  // quitar visibilidad actual
+  $(".visible").removeClass("visible");
+
+  // pequeño delay para reiniciar animación
+  setTimeout(() => {
+    $("#p" + chara_id).addClass("visible");
+    $("#t" + chara_id).addClass("visible");
+  }, 50);
+}
