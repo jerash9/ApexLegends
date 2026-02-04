@@ -2,12 +2,12 @@ AOS.init();
 
 $(document).ready(function(){
       
-      $(".charactertext").hide();
-      $("#t1").show();
-      $("#t1").addClass("visible")
-      $(".portrait_img").hide();
-      $("#p1").show();
-      $("#p1").addClass("visible");
+    $(".charactertext").hide();
+    $("#t1").show();
+    $("#t1").addClass("visible")
+    $(".portrait_img").hide();
+    $("#p1").show();
+    $("#p1").addClass("visible");
       
       
       
@@ -51,37 +51,20 @@ $(document).ready(function(){
         // Menu hamburguesa
 
         
- 
-    function changeChara(chara_id) {
+        // mapa inicial
+        const layers = document.querySelectorAll(".map-layer");
+        let currentLayer = 0;
 
-  // quitar visibilidad actual
-  $(".visible").removeClass("visible");
+        function changeMap(map_id) {
+        const nextLayer = (currentLayer + 1) % 2;
 
-  // pequeño delay para reiniciar animación
-  setTimeout(() => {
-    $("#p" + chara_id).addClass("visible");
-    $("#t" + chara_id).addClass("visible");
-  }, 50);
+        layers[nextLayer].style.backgroundImage ="url('assets/mapas/Map_" + map_id + ".webp')";
 
+        layers[nextLayer].classList.add("active");
+        layers[currentLayer].classList.remove("active");
 
-          const layers = document.querySelectorAll(".map-layer");
-let currentLayer = 0;
-
-// mapa inicial
-layers[0].style.backgroundImage = "url('assets/mapas/Map_1.webp')";
-layers[0].classList.add("active");
-
-function changeMap(map_id) {
-  const nextLayer = (currentLayer + 1) % 2;
-
-  layers[nextLayer].style.backgroundImage =
-    "url('assets/mapas/Map_" + map_id + ".webp')";
-
-  layers[nextLayer].classList.add("active");
-  layers[currentLayer].classList.remove("active");
-
-  currentLayer = nextLayer;
-}
+        currentLayer = nextLayer;
+        }   
 
 
         const hamburger = document.querySelector('.hamburger');
@@ -92,6 +75,4 @@ function changeMap(map_id) {
           mobileMenu.classList.toggle('active');
         });
 
-
-}
    });
