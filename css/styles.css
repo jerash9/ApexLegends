@@ -458,17 +458,19 @@ box-shadow: 0 0 20px rgba(230, 182, 92, 0.6);
 }
 
 /* ARMAS */
-.arsenal{
- background-image: url(../assets/Fondos/armasFondoBase.jpg);
+.arsenal {
+    background-image: url(../assets/Fondos/armasFondoBase.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 .weaponlist {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
     margin-top: 60px;
-    max-width: 1400px;
-    align-items: center;
-
+    max-width: 1000px;
+    width: 100%;
 }
 .container {
 display: flex;
@@ -484,8 +486,42 @@ padding: 40px 20px 160px 20px;
 }
 
 .weapon {
-    padding: 50px;
-} 
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 70, 85, 0.4);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.weapon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(255, 70, 85, 0.6);
+}
+.weapon h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.weapon img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.weapon:hover img {
+    transform: scale(1.08);
+}
+.container h1 {
+    color: white;
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
 
 /* MAPAS EN FOOTER */
