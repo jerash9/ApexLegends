@@ -1,7 +1,4 @@
-
-
 AOS.init();
-
 
 $(document).ready(function(){
       
@@ -51,14 +48,10 @@ $(document).ready(function(){
             
         };
         
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-      
-        hamburger.addEventListener('click', () => {
-          mobileMenu.classList.toggle('active');
-        });
+        // Menu hamburguesa
+
         
-    });
+ 
     function changeChara(chara_id) {
 
   // quitar visibilidad actual
@@ -69,4 +62,36 @@ $(document).ready(function(){
     $("#p" + chara_id).addClass("visible");
     $("#t" + chara_id).addClass("visible");
   }, 50);
+
+
+          const layers = document.querySelectorAll(".map-layer");
+let currentLayer = 0;
+
+// mapa inicial
+layers[0].style.backgroundImage = "url('assets/mapas/Map_1.webp')";
+layers[0].classList.add("active");
+
+function changeMap(map_id) {
+  const nextLayer = (currentLayer + 1) % 2;
+
+  layers[nextLayer].style.backgroundImage =
+    "url('assets/mapas/Map_" + map_id + ".webp')";
+
+  layers[nextLayer].classList.add("active");
+  layers[currentLayer].classList.remove("active");
+
+  currentLayer = nextLayer;
 }
+
+
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+      
+        hamburger.addEventListener('click', () => {
+            console.log("Coño");
+          mobileMenu.classList.toggle('active');
+        });
+
+
+}
+   });
