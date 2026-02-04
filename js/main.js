@@ -2,26 +2,48 @@
 
 
 $(document).ready(function(){
-    $(".charactertext p").hide();
+    $(".charactertext").hide();
     $("#t1").show();
+    $("#t1").addClass("visible")
     $(".portrait_img").hide();
-    $("#1").show();
+    $("#p1").show();
+    $("#p1").addClass("visible");
 
 
-    $(".card").on("click", function(){
-        $("#1").hide();
-        $("#t1").hide();
-        $("#5").show();
-        $("#t3").show();
-    });
+    // $(".card").on("click", function(){
+    //     $("#p1").hide();
+    //     $("#t1").hide();
+    //     $("#p5").show();
+    //     $("#t3").show();
+    // });
 
 
+    // Botones de cambio de personaje
+
+    function changeChara(chara_id) {
+        //hide currently visible
+        $(".visible").hide();
+        $(".visible").removeClass("visible");
+        //show chosen character
+        $("#p"+chara_id).show()
+        $("#p"+chara_id).addClass("visible");
+        $("#t"+chara_id).show()
+        $("#t"+chara_id).addClass("visible");
+    };
+
+    let charaBtns = document.querySelectorAll(".card");
+
+    for (let j = 0; j < charaBtns.length; j++) {
+        charaBtns[j].addEventListener("click",function(){
+            changeChara(this.dataset.chara);
+        });
+
+    };
 
     // Botones de cambio de mapa
 
     function changeMap(map_id) {
         document.getElementById("bg").style.backgroundImage = "url('assets/mapas/Map_"+map_id+".webp')";
-        console.log("'Map_"+map_id+".webp')");
     };
 
     let mapsBtns = document.querySelectorAll(".map");
@@ -31,6 +53,6 @@ $(document).ready(function(){
             changeMap(this.dataset.map);
         });
         
-    }
+    };
 
 });

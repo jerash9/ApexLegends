@@ -7,6 +7,7 @@
 </head>
 
 <body id="bg" class="characters">
+
     <header class="navbar">
         <div class="nav-left">
             <a href="index.html">
@@ -35,41 +36,220 @@
     </header>
 
 <div class="container">
-    <h1>SELECCIÓN DE PERSONAJES</h1>
+    <div class="title">
+        <h1>SELECCIÓN DE PERSONAJES</h1>
+    </div>
 
     <div class="characterselector">
         <div class="portrait">
-            <img class="portrait_img" id="1" src="/assets/personaje/FullPortrait_Bloodhound.webp">
-            <img class="portrait_img" id="2" src="/assets/personaje/FullPortrait_Gibraltar.webp">
-            <img class="portrait_img" id="3" src="/assets/personaje/FullPortrait_Lifeline.webp">
-            <img class="portrait_img" id="4" src="/assets/personaje/FullPortrait_Pathfinder.webp">
-            <img class="portrait_img" id="5" src="/assets/personaje/FullPortrait_Wraith.png">
-            <img class="portrait_img" id="6" src="/assets/personaje/FullPortrait_Bangalore.webp">
-            <img class="portrait_img" id="7" src="/assets/personaje/FullPortrait_Caustic.webp">
-            <img class="portrait_img" id="8" src="/assets/personaje/FullPortrait_Mirage.webp">
+            <img class="portrait_img" id="p1" src="/assets/personaje/FullPortrait_Bloodhound.webp">
+            <img class="portrait_img" id="p2" src="/assets/personaje/FullPortrait_Gibraltar.png">
+            <img class="portrait_img" id="p3" src="/assets/personaje/FullPortrait_Lifeline.png">
+            <img class="portrait_img" id="p4" src="/assets/personaje/FullPortrait_Pathfinder.png">
+            <img class="portrait_img" id="p5" src="/assets/personaje/FullPortrait_Wraith.png">
+            <img class="portrait_img" id="p6" src="/assets/personaje/FullPortrait_Bangalore.png">
+            <img class="portrait_img" id="p7" src="/assets/personaje/FullPortrait_Caustic.png">
+            <img class="portrait_img" id="p8" src="/assets/personaje/FullPortrait_Mirage.png">
         </div>
         <div class="characterlist" >
             <div class="row" id="r1">
-                <div class="card" id="c1"><img src="/assets/personaje/Portrait_Bloodhound.webp"></div>
-                <div class="card" id="c2"><img src="/assets/personaje/Portrait_Gibraltar.webp"></div>
-                <div class="card" id="c3"><img src="/assets/personaje/Portrait_Lifeline.webp"></div>
-                <div class="card" id="c4"><img src="/assets/personaje/Portrait_Pathfinder.webp"></div>
+                <div class="card" id="c1" data-chara="1"><img src="/assets/personaje/Portrait_Bloodhound.webp"></div>
+                <div class="card" id="c2" data-chara="2"><img src="/assets/personaje/Portrait_Gibraltar.webp"></div>
+                <div class="card" id="c3" data-chara="3"><img src="/assets/personaje/Portrait_Lifeline.webp"></div>
+                <div class="card" id="c4" data-chara="4"><img src="/assets/personaje/Portrait_Pathfinder.webp"></div>
             </div>
             <div class="row" id="r2">
-                <div class="card" id="c5"><img src="/assets/personaje/Portrait_Wraith_full.webp"></div>
-                <div class="card" id="c6"><img src="/assets/personaje/Portrait_Bangalore.webp"></div>
-                <div class="card" id="c7"><img src="/assets/personaje/Portrait_Caustic.webp"></div>
-                <div class="card" id="c8"><img src="/assets/personaje/Portrait_Mirage.webp"></div>
+                <div class="card" id="c5" data-chara="5"><img src="/assets/personaje/Portrait_Wraith_full.webp"></div>
+                <div class="card" id="c6" data-chara="6"><img src="/assets/personaje/Portrait_Bangalore.webp"></div>
+                <div class="card" id="c7" data-chara="7"><img src="/assets/personaje/Portrait_Caustic.webp"></div>
+                <div class="card" id="c8" data-chara="8"><img src="/assets/personaje/Portrait_Mirage.webp"></div>
             </div>
             <div class="text_container">
-                <div class="charactertext">
-                    <p id="t1">Bloodhound. Incidunt hic voluptatibus asperiores alias necessitatibus. Libero hic modi animi impedit fuga asperiores? Ipsa dolorum quod aliquid expedita vel, architecto consequatur omnis.</p>
+                <div class="charactertext" id="t1">
+                    <div class="ability">
+                        <img src="assets/habilidades/Bloodhound_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name"> Ojo omnisciente </p>
+                            <p class="ability_description">Revela brevemente rivales ocultos, trampas y pistas a través de las estructuras frente a ti.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Bloodhound_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Rastreo</p>
+                            <p class="ability_description">Verás los rastros dejados por tus enemigos.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Bloodhound_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Bestia Cazadora</p>
+                            <p class="ability_description">Agudiza tus sentidos, lo que te permite moverte más rápido y resaltar a tu presa.
+
+</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="charactertext">
-                    <p id="t2">Gibraltar. Incidunt hic voluptatibus asperiores alias necessitatibus. Libero hic modi animi impedit fuga asperiores? Ipsa dolorum quod aliquid expedita vel, architecto consequatur omnis.</p>
+                <div class="charactertext" id="t2">
+                    <div class="ability">
+                        <img src="assets/habilidades/Gibraltar_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Cupula de protección</p>
+                            <p class="ability_description">Crea un escudo cúpula que bloquea ataques y hace que las curaciones actúen más rápido.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Gibraltar_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Escudo de arma</p>
+                            <p class="ability_description">Al apuntar con la mira, se despliega un escudo de arma que bloquea los proyectiles que te disparan.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Gibraltar_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Bombardeo Defensivo</p>
+                            <p class="ability_description">Solicita un ataque de mortero concentrado en una posición marcada.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="charactertext">
-                    <p id="t3">Lifeline. Incidunt hic voluptatibus asperiores alias necessitatibus. Libero hic modi animi impedit fuga asperiores? Ipsa dolorum quod aliquid expedita vel, architecto consequatur omnis.</p>
+                <div class="charactertext" id="t3">
+                    <div class="ability">
+                        <img src="assets/habilidades/Lifeline_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Dron médico DOC</p>
+                            <p class="ability_description">DOC cura a todos los aliados cercanos. Es posible asignar a DOC para que siga a los aliados.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Lifeline_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Planeo de combate</p>
+                            <p class="ability_description">Lifeline puede planear durante unos segundos. Despliega a DOC para que reanime a tus compañeros.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Lifeline_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Halo de DOC</p>
+                            <p class="ability_description">Lanza a DOC para activar su sistema de escudo de halo. Todas las leyendas que están dentro usan los consumibles de escudo y salud más rápido.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charactertext" id="t4">
+                    <div class="ability">
+                        <img src="assets/habilidades/Pathfinder_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Gancho de agarre</p>
+                            <p class="ability_description">Usa el gancho para llegar a lugares difíciles de alcanzar con rapidez.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Pathfinder_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Información privilegiada</p>
+                            <p class="ability_description">Escanea una baliza de reconocimiento para desvelar la ubicación del próximo anillo.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Pathfinder_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Lanzatirolinas</p>
+                            <p class="ability_description">Despliega una tirolina que pueden usar todos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charactertext" id="t5">
+                    <div class="ability">
+                        <img src="assets/habilidades/Wraith_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">En el vacío</p>
+                            <p class="ability_description">Te reposicionas rápidamente en la seguridad del vacío para evitar cualquier daño.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Wraith_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Voces del vacío</p>
+                            <p class="ability_description">Una voz te advierte cuando el peligro se acerca. Por lo que parece, esta de tu parte.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Wraith_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Brecha Dimensional</p>
+                            <p class="ability_description">Conecta 2 ubicaciones con portales durante 45 segundos. Todo tu equipo puede usarlas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charactertext" id="t6">
+                    <div class="ability">
+                        <img src="assets/habilidades/Bangalore_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Lanzahumo</p>
+                            <p class="ability_description">Te reposicionas rápidamente en la seguridad del vacío para evitar cualquier daño.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Bangalore_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Tiempo Doble</p>
+                            <p class="ability_description">Si recibes disparos mientras corres, te moverás más rápido durante un breve periodo de tiempo.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Bangalore_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Retumbar del trueno</p>
+                            <p class="ability_description">Solicita un ataque de artillería que avanza progresivamente por el campo de batalla.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charactertext" id="t7">
+                    <div class="ability">
+                        <img src="assets/habilidades/Caustic_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Trampa de gas Nox</p>
+                            <p class="ability_description">Suelta recipientes que liberan gas letal Nox cuando se les dispara o los activa un enemigo.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Caustic_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Investigación de campo</p>
+                            <p class="ability_description">Gana puntos de mejora adicionales causando daño con gas, abriendo cajas de muerte y escaneando consolas de anillo.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Caustic_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Granada de gas Nox</p>
+                            <p class="ability_description">Cubre una zona extensa con gas Nox.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charactertext" id="t8">
+                    <div class="ability">
+                        <img src="assets/habilidades/Mirage_1.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Desquiciar</p>
+                            <p class="ability_description">Despliega un señuelo holográfico para confundir al enemigo.</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Mirage_2.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Ahora me ves...</p>
+                            <p class="ability_description">Activar el camuflaje automáticamente al usar balizas de reaparición y al reanimar a leyendas aliadas</p>
+                        </div>
+                    </div>
+                    <div class="ability">
+                        <img src="assets/habilidades/Mirage_3.svg">
+                        <div class="ability_text">
+                            <p class="ability_name">Alma de la fiesta</p>
+                            <p class="ability_description">Despliega un conjunto de señuelos para distraer a los enemigos.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,7 +264,6 @@
     </footer>
     
 <!-- Jquery y JS-->
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="js/main.js"></script>
