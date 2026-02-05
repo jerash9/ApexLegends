@@ -468,21 +468,29 @@ align-items: flex-start
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   opacity: 0;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   text-align: center;
-  max-width: 500px;
 
   /* Esto permite animar la propiedad display de none a block */
   transition: all 0.3s ease-in-out;
   transition-behavior:  allow-discrete;
 }
 
+.formBg {
+  background-image: url(../assets/Fondos/FondoBlanco.png);
+  background-size: cover;
+}
+
+.formBg * {
+  padding: 10px 20px 0px 20px;
+}
+
 .formWindow.show-modal {
-    display: block;
+    display: flex;
+    flex-direction: row;
     opacity: 1;
 }
 
@@ -516,7 +524,7 @@ align-items: flex-start
 }
 
 .formWindow button {
-    background-color: #4CAF50;
+    background-color: #ff4655;
     color: white;
     padding: 10px 20px;
     border: none;
