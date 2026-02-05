@@ -1,14 +1,17 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>  
     
 
@@ -46,8 +49,8 @@
 
         <div class="nav-right">
     
-            <div class="nav-button play">
-                <a href="#">Jugar ya</a>
+            <div class="nav-button play formBtn">
+                <p>Jugar ya</p>
             </div>
         </div>
     </header>
@@ -56,11 +59,27 @@
             <source src="assets/Fondos/video.mp4" type="video/mp4">
         </video>
         
-        <h1>Apex Legends</h1>
-         <div class="hero-button">
-            <a href="#">Descargar</a>
-            </div>
-
+        <img href="assets/Fondos/LogoMain.png">
+         <div class="hero-button formBtn">
+            <p>¡Unete a la beta!</p>
+        </div>
+    <div class="formWindow">
+        <h2>Contáctame</h2>
+        <p>Si tienes alguna pregunta o deseas ponerte en contacto conmigo, por favor completa el formulario a continuación:</p>
+        
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br><br>
+            
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea><br><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
         </div>
     </section>
 <section class="videos-section">
@@ -98,6 +117,9 @@
             <h1>Apex Legends</h1>
             <p>Apex Legends es un videojuego battle royale gratuito desarrollado por Respawn Entertainment y ambientado en un universo futurista lleno de acción. El juego enfrenta a varios equipos de jugadores en un mismo mapa, donde el objetivo principal es sobrevivir hasta ser el último escuadrón en pie. A diferencia de otros títulos del género, Apex Legends destaca por su ritmo rápido, su énfasis en el trabajo en equipo y su sistema de movimiento fluido, que permite desplazarse de forma ágil por el entorno.
             Cada partida ofrece una experiencia diferente gracias a la combinación de estrategia, habilidad individual y cooperación entre los jugadores, lo que convierte a Apex Legends en un juego competitivo y dinámico.</p>
+            <div id="trailerBtn" class="nav-button play formBtn">
+                <a>¡Unete a la beta!</a>
+            </div>
         </div>
         
     </section>
@@ -117,7 +139,7 @@
 
         <section class="hero4"  >
             <div class="ArmaContenedor">
-                 <img src="assets/armas/FondoArma.png" alt="arma" class="Arma">
+                 <img src="assets/armas/AR_Icon.svg" alt="arma" class="Arma">
             </div>
             <div class="hero-content" data-aos="fade-left">
                 <h1>Apex Legends</h1>
@@ -140,9 +162,9 @@
 </body>
 <footer class="footer">
 
-    <div class="footer-container">
+    <div class="footer-container" >
 
-        <div class="footer-socials">
+        <div class="footer-socials" data-aos="fade-up">
             <a href="https://www.instagram.com/playapex/" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>

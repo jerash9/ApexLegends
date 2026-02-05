@@ -1,10 +1,20 @@
 
+@font-face {
+  font-family: apexFont;
+  src: url(../fonts/Apex-ExtraLight.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif,;
 }
+
+h1, h2, h3 {
+  font-family: apexFont;
+}
+
 body {
     background: none;
     display: flex;
@@ -121,6 +131,7 @@ body {
     background-color: #ffffff22;
 }
 
+
 /* PLAY BUTTON */
 .play {
     background-color: #ff4655;
@@ -147,11 +158,9 @@ body {
      
    
     }
-  .hero h1 {
+  .hero img {
     position: absolute;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    font-size: 60px;
+    filter:invert(1);
     align-items: center;
     height: 30vh;
 }
@@ -236,23 +245,24 @@ body {
     justify-content: center;
     /* background-color: #ff2f40; */
     background-image: url(../assets/Fondos/fondorojo.jpg);
-}
-
-/* GRID DE VIDEOS */
-.videos-grid {
+  }
+  
+  /* GRID DE VIDEOS */
+  .videos-grid {
     width: 100vh;
     display: flex;
     justify-content: center;
     gap: 70px;                     /* espacio entre vídeos */
-}
-
-/* CAJA NEGRA */
-.video-box {
-  width: 100%;
-  max-width: 100%;
-  background-color: #000000b0;
-  padding: 15px;
-  border-radius: 8px;
+  }
+  
+  /* CAJA NEGRA */
+  .video-box {
+    width: 100%;
+    max-width: 100%;
+    background-color: #000000b0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 50px 15px black;
 }
 
 
@@ -268,8 +278,10 @@ color: #dddddd;
 }
 
 .hero2 {
+    overflow: hidden;
     height: calc(100vh - 70px);
-     background-image: url(../assets/Fondos/armasFondoBase.jpg);
+    background-image: url(../assets/Fondos/FondoBlanco.png);
+    filter: invert(1);
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -277,6 +289,11 @@ color: #dddddd;
     padding: 0 5%;
     width: 100%;
 }
+
+.hero2 iframe {
+    filter: invert(1);
+}
+
 .gameplay {
     width: 55%;
     max-width: 800px;
@@ -309,7 +326,7 @@ color: #dddddd;
 }
 .hero4 {
      height: calc(110vh);
-    background-image: url(../assets/Fondos/armasFondoBase.jpg);
+    background-image: url(../assets/Fondos/FondoBlanco.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -425,6 +442,76 @@ align-items: flex-start
 .container h1{
     justify-content: center;
     height: fit-content;
+}
+
+.formWindow {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 500px;
+
+  /* Esto permite animar la propiedad display de none a block */
+  transition: all 0.3s ease-in-out;
+  transition-behavior:  allow-discrete;
+}
+
+.formWindow.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.formWindow h2 {
+    font-size: 24px;
+}
+
+.formWindow p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.formWindow form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formWindow label {
+    margin-bottom: 5px;
+}
+
+.formWindow input,
+.formWindow textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.formWindow button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formWindow button:hover {
+    background-color: #45a049;
 }
 
 /* CHARACTERS */
@@ -660,7 +747,8 @@ filter: brightness(0.6);
 
 /* ARMAS */
 .arsenal {
-    background-image: url(../assets/Fondos/armasFondoBase.jpg);
+    background-image: url(../assets/Fondos/fondorojo.jpg);
+   
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -716,6 +804,7 @@ padding: 40px 20px 160px 20px;
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+    filter: invert(1);
     transform: skew(14deg);
 }
 .weapon:hover img {
@@ -827,9 +916,6 @@ padding: 40px 20px 160px 20px;
   transform: translateY(0);
   position: relative;
 }
-
-
-
 
 
 /* MEDIA QUERIES */
@@ -945,6 +1031,7 @@ padding: 40px 20px 160px 20px;
 
   /* VIDEO BACKGROUND */
   .video-bg {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     left: 50%;
@@ -983,6 +1070,7 @@ padding: 40px 20px 160px 20px;
     height: auto;
     padding: 60px 16px;
     gap: 32px;
+ 
   }
    .hero4 {
     flex-direction: column;

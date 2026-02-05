@@ -49,6 +49,7 @@ AOS.init();
         })
     }
 
+
 $(document).ready(function(){
       
     $(".charactertext").hide();
@@ -121,5 +122,32 @@ $(document).ready(function(){
         mobileMenu.classList.toggle('active');
     });
 
+
+    //Ventana Modal del formulario
+
+    let formBtns = document.querySelectorAll(".formBtn");
+    let formWindow = document.querySelector(".formWindow")
+    function openFormWindow(){
+        formWindow.classList.add("show-modal");
+    };
+    
+    
+    for (let q = 0; q < formBtns.length; q++) {
+        formBtns[q].addEventListener("click", function() {
+            openFormWindow();
+    });        
+    }
+
+    let formwindow = document.querySelector(".formWindow");
+    
+    function closeFormWindow(){
+        formWindow.classList.remove("show-modal");
+    }
+    
+    window.addEventListener("click", function(event){
+            if (event.target == formWindow) {
+                closeFormWindow(formWindow);
+            }
+        })
 
 });
