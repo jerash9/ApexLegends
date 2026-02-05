@@ -15,6 +15,10 @@ h1, h2, h3 {
   font-family: apexFont;
 }
 
+.btnText{
+  font-family: apexFont;
+}
+
 body {
     background: none;
     display: flex;
@@ -58,7 +62,7 @@ body {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 95px;
+  top: 120px;
   left: 0;
   width: 100%;
   background-color: #0f1923;
@@ -73,6 +77,8 @@ body {
   color: white;
   text-decoration: none;
   font-size: 18px;
+     font-family: apexFont;
+   letter-spacing: 1px;
 }
 
 .mobile-menu .play-link {
@@ -99,6 +105,8 @@ body {
   transform: skew(-14deg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
   backdrop-filter: blur(6px);
+   font-family: apexFont;
+   letter-spacing: 1px;
 }
 
 .nav-left  img {
@@ -125,6 +133,8 @@ body {
   text-decoration: none;
   padding: 8px 14px;
   transform: skew(14deg);
+   font-family: apexFont;
+   letter-spacing: 2px;
 }
 
 .nav-button:hover {
@@ -158,11 +168,16 @@ body {
      
    
     }
-  .hero img {
+  .hero img  {
     position: absolute;
     filter:invert(1);
     align-items: center;
-    height: 30vh;
+    z-index: 3;
+     width: 70vh;
+    height: 70vh;
+    border-radius: 20px;
+    padding: 10vh;
+
 }
 
 /* HERO CONTENTIDO */
@@ -1014,6 +1029,8 @@ padding: 40px 20px 160px 20px;
   .hero-content h1 {
     font-size: 32px;
     top: 30%; 
+    
+    
   }
 
   .hero-content p {
