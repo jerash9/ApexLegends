@@ -156,7 +156,7 @@ if (carousel) {
         cellAlign: 'center',
         contain: true,
         wrapAround: true,
-        autoPlay: 3000, // cambia cada 3 segundos
+        autoPlay: 3000,
         pauseAutoPlayOnHover: true,
         imagesLoaded: true
     });

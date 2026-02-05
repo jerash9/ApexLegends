@@ -175,9 +175,9 @@ body {
     position: absolute;
     filter:invert(1);
     align-items: center;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
+    z-index: 2;
+    width: 20vw;
+    top: 200px;
 
 }
 
@@ -230,7 +230,7 @@ body {
 .hero-button {
     background-color: #ff4655;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -1094,6 +1094,12 @@ padding: 40px 20px 160px 20px;
     
     
   }
+  .logoMain{
+    text-align: center;
+    width:50vw;
+    top:200px ;
+  }
+ 
 
   .hero-content p {
     font-size: 16px;
@@ -1102,7 +1108,7 @@ padding: 40px 20px 160px 20px;
   }
 
   .hero-button {
-    top: 40%; 
+   
     padding: 12px 22px;
     font-size: 16px;
   
@@ -1212,5 +1218,11 @@ padding: 40px 20px 160px 20px;
 
   .footer-socials {
     gap: 12px;
+  }
+
+   .logoMain{
+    text-align: center;
+    width:50vw;
+    top:300px ;
   }
 }
