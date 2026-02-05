@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Arsenal</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="arsenal">
 <header class="navbar">
@@ -35,32 +36,139 @@
     <div class="containerArmas">
         <h1>Armas</h1>
         <div class="weaponlist">
-            <div class="weapon">
+            <div id="openWeapon1" class="weapon" data-weapon="1">
                 <h2>Rifle de asalto</h2>
-                <img src="assets/armas/Bocek_Compound_Bow.webp">
+                <img src="assets/armas/AR_Icon.svg">
             </div>
-            <div class="weapon">
+            <div id="openWeapon2" class="weapon" data-weapon="2">
                 <h2>Sub-fusil</h2>
-                <img src="assets/armas/Carabina_R-301.webp">
+                <img src="assets/armas/SMG_Icon.svg">
             </div>
-            <div class="weapon">
+            <div id="openWeapon3" class="weapon" data-weapon="3">
                 <h2>Metralleta ligera</h2>
-                <img src="assets/armas/Kraber_.50-Cal_Sniper.webp">
+                <img src="assets/armas/LMG_Icon.svg">
             </div>
-            <div class="weapon">
+            <div id="openWeapon4" class="weapon" data-weapon="4">
                 <h2>Rifle de tirador</h2>
-                <img src="assets/armas/M600_Spitfire.webp">
+                <img src="assets/armas/Sniper_Icon.svg">
             </div>
-            <div class="weapon">
+            <div id="openWeapon5" class="weapon" data-weapon="5">
                 <h2>Escopeta</h2>
-                <img src="assets/armas/Mastiff_Shotgun.webp">
+                <img src="assets/armas/Shotgun_Icon.svg">
             </div>
-            <div class="weapon">
+            <div id="openWeapon6" class="weapon" data-weapon="6">
                 <h2>Pistola</h2>
+                <img src="assets/armas/Piston_Icon.svg">
+            </div>
+        </div>
+    </div>
+    <div id="weaponWindow1" class="weapon-window" data-modalnumber="1">
+        <div id="ar" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="1">&times;</span>
+                <h2>Rifles de asalto</h2>
+            </div>
+            <p>
+                De cerca, lo mejor es mantener pulsado el gatillo. De lejos, hay que cambiar de estrategia.
+            </p>
+            <div id="ar" class="weapon-images">
+                <img src="assets/armas/R-301_Carbine.webp">
+                <img src="assets/armas/VK-47_Flatline.webp">
+                <img src="assets/armas/Hemlok_Burst_AR.webp">
+                <img src="assets/armas/HAVOC_Rifle.webp">
+                <img src="assets/armas/Nemesis_Burst_AR.webp">
+            </div>
+        </div>
+    </div>
+    <div id="weaponWindow2" class="weapon-window" data-modalnumber="2">
+        <div id="smg" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="2">&times;</span>
+                <h2>Sub-fusiles</h2>
+            </div>
+            <p>
+                De cerca, lo mejor es mantener pulsado el gatillo. De lejos, hay que cambiar de estrategia.
+            </p>
+            <div class="weapon-images">
                 <img src="assets/armas/R-99_SMG.webp">
+                <img src="assets/armas/Alternator_SMG.webp">
+                <img src="assets/armas/Prowler_Burst_PDW.webp">
+                <img src="assets/armas/Volt_SMG.webp">
+                <img src="assets/armas/C.A.R._SMG.webp">
+            </div>
+        </div>
+    </div>
+    <div id="weaponWindow3" class="weapon-window" data-modalnumber="3">
+        <div id="lmg" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="3">&times;</span>
+                <h2>Ametralladoras ligeras</h2>
+            </div>
+            <p>
+                De cerca, lo mejor es mantener pulsado el gatillo. De lejos, hay que cambiar de estrategia.
+            </p>
+            <div class="weapon-images">
+                <img src="assets/armas/M600_Spitfire.webp">
+                <img src="assets/armas/Devotion_LMG.webp">
+                <img src="assets/armas/L-STAR_EMG.webp">
+                <img src="assets/armas/Rampage_LMG.webp">
+            </div>
+        </div>
+    </div>
+        <div id="weaponWindow4" class="weapon-window" data-modalnumber="4">
+        <div id="sniper" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="4">&times;</span>
+                <h2>Rifles de tirador</h2>
+            </div>
+            <p>
+                Poneos cómodos, porque la zona es vuestra.
+            </p>
+            <div class="weapon-images">
+                <img src="assets/armas/Kraber_.50-Cal_Sniper.webp">
+                <img src="assets/armas/Charge_Rifle.webp">
+                <img src="assets/armas/Longbow_DMR.webp">
+                <img src="assets/armas/Sentinel.webp">
+            </div>
+        </div>
+    </div>
+        <div id="weaponWindow5" class="weapon-window" data-modalnumber="5">
+        <div id="shotgun" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="5">&times;</span>
+                <h2>Escopetas</h2>
+            </div>
+            <p>
+                De cerca, lo mejor es mantener pulsado el gatillo. De lejos, hay que cambiar de estrategia.
+            </p>
+            <div class="weapon-images">
+                <img src="assets/armas/EVA-8_Auto.webp">
+                <img src="assets/armas/Mastiff_Shotgun.webp">
+                <img src="assets/armas/Mozambique_Shotgun.webp">
+                <img src="assets/armas/Peacekeeper.webp">
+            </div>
+        </div>
+    </div>
+    </div>
+        <div id="weaponWindow6" class="weapon-window" data-modalnumber="6">
+        <div id="pistol" class="weapon-content">
+            <div class="weapontitle">
+                <span class="close" data-closemodal="6">&times;</span>
+                <h2>Pistolas</h2>
+            </div>
+            <p>
+                De cerca, lo mejor es mantener pulsado el gatillo. De lejos, hay que cambiar de estrategia.
+            </p>
+            <div class="weapon-images">
+                <img src="assets/armas/P2020.webp">
+                <img src="assets/armas/RE-45_Auto.webp">
+                <img src="assets/armas/Wingman.webp">
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

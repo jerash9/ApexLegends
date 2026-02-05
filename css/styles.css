@@ -679,6 +679,7 @@ flex-direction: column;
 flex: 1;
 padding: 40px 20px 160px 20px;
  align-items: center;
+ justify-content: center
 }
 
 .container h1{
@@ -693,10 +694,11 @@ padding: 40px 20px 160px 20px;
     padding: 30px;
     text-align: center;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    transform: skew(-14deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .weapon:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) skew(-14deg);
     box-shadow: 0 0 40px rgba(255, 70, 85, 0.6);
 }
 .weapon h2 {
@@ -705,16 +707,19 @@ padding: 40px 20px 160px 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transform: skew(14deg);
 }
 .weapon img {
     width: 100%;
     max-width: 320px;
+    max-height: 100px;
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+    transform: skew(14deg);
 }
 .weapon:hover img {
-    transform: scale(1.08);
+    transform: scale(1.08) skew(14deg);
 }
 .container h1 {
     color: white;
@@ -736,6 +741,84 @@ padding: 40px 20px 160px 20px;
   transform: translateX(90px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   position: absolute;
+}
+
+
+/* Ventanas Modales de las armas */
+
+.weapon-window {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+
+    /* Esto permite animar la propiedad display de none a block */
+    transition: all 0.3s ease-in-out;
+    transition-behavior:  allow-discrete;
+}
+
+.weapon-window.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.weapon-window .weapon-content {
+    color: white;
+    background-color: black;
+    margin: 10% auto;
+    padding: 20px;
+    border: 5px solid rgb(255, 70, 86);
+    max-width: 900px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.4rem;
+}
+
+#pistol .weapon-images img, #smg .weapon-images img{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.weapon-window .weapon-content h2 {
+    font-size: 2rem;
+}
+
+.weapon-window .weapon-content .close {
+    color: rgb(255, 70, 86);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.weapon-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.weapon-images img {
+  max-height: 100px;
+  max-width: 300px;
+}
+
+.weapontitle {
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  justify-content: space-around;
 }
 
 /* estado visible */
