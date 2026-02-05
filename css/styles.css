@@ -262,7 +262,7 @@ body {
     display: flex;
     justify-content: center;
     /* background-color: #ff2f40; */
-    background-image: url(../assets/Fondos/fondorojo.jpg);
+    background-image: url(../assets/Fondos/fondorojo.webp);
   }
   
   /* GRID DE VIDEOS */
@@ -298,7 +298,7 @@ color: #dddddd;
 .hero2 {
     overflow: hidden;
     height: calc(100vh - 70px);
-    background-image: url(../assets/Fondos/FondoBlanco.png);
+    background-image: url(../assets/Fondos/FondoBlanco.webp);
     filter: invert(1);
     display: flex;
     justify-content: center;
@@ -344,7 +344,7 @@ color: #dddddd;
 }
 .hero4 {
      height: calc(110vh);
-    background-image: url(../assets/Fondos/FondoBlanco.png);
+    background-image: url(../assets/Fondos/FondoBlanco.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -529,7 +529,7 @@ align-items: flex-start
 }
 
 .formBg {
-  background-image: url(../assets/Fondos/FondoBlanco.png);
+  background-image: url(../assets/Fondos/FondoBlanco.webp);
   background-size: cover;
 }
 
@@ -823,7 +823,7 @@ filter: brightness(0.6);
 
 /* ARMAS */
 .arsenal {
-    background-image: url(../assets/Fondos/fondorojo.jpg);
+    background-image: url(../assets/Fondos/fondorojo.webp);
    
     background-size: cover;
     background-position: center;
