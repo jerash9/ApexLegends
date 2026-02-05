@@ -149,5 +149,17 @@ $(document).ready(function(){
                 closeFormWindow(formWindow);
             }
         })
+        let carousel = document.querySelector('.main-carousel');
+
+if (carousel) {
+    new Flickity(carousel, {
+        cellAlign: 'center',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 3000, // cambia cada 3 segundos
+        pauseAutoPlayOnHover: true,
+        imagesLoaded: true
+    });
+}
 
 });
